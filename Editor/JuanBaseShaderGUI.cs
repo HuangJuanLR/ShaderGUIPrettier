@@ -196,7 +196,14 @@ namespace JuanShaderEditor
 		    if (material.HasProperty(Properties.AlphaClip))
 			    alphaClip = material.GetFloat(Properties.AlphaClip) >= 0.5f;
 		    
-		    CoreUtils.SetKeyword(material, ShaderKeywordStrings._ALPHATEST_ON, alphaClip);
+		    if (alphaClip)
+		    {
+			    material.EnableKeyword(ShaderKeywordStrings._ALPHATEST_ON);    
+		    }
+		    else
+		    {
+			    material.DisableKeyword(ShaderKeywordStrings._ALPHATEST_ON);
+		    }
 
 		    int renderQueue = material.shader.renderQueue;
 		    material.SetOverrideTag("RenderType", "");
@@ -205,7 +212,15 @@ namespace JuanShaderEditor
 			    SurfaceType surfaceType =
 				    (SurfaceType)material.GetFloat(Properties.SurfaceType);
 			    bool zwrite = false;
-			    CoreUtils.SetKeyword(material, ShaderKeywordStrings._SURFACE_TYPE_TRANSPARENT, surfaceType == SurfaceType.Transparent);
+			    
+			    if (surfaceType == SurfaceType.Transparent)
+			    {
+				    material.EnableKeyword(ShaderKeywordStrings._SURFACE_TYPE_TRANSPARENT);
+			    }
+			    else
+			    {
+				    material.DisableKeyword(ShaderKeywordStrings._SURFACE_TYPE_TRANSPARENT);
+			    }
 				
 			    if (surfaceType == SurfaceType.Opaque)
                 {
@@ -322,8 +337,16 @@ namespace JuanShaderEditor
 		    
 		    // Receive Shadows
 		    if (material.HasProperty(Properties.ReceiveShadows))
-			    CoreUtils.SetKeyword(material, ShaderKeywordStrings._RECEIVE_SHADOWS_OFF,
-				    material.GetFloat(Properties.ReceiveShadows) == 0.0f);
+		    {
+			    if (material.GetFloat(Properties.ReceiveShadows) == 0.0f)
+			    {
+				    material.EnableKeyword(ShaderKeywordStrings._RECEIVE_SHADOWS_OFF);
+			    }
+			    else
+			    {
+				    material.DisableKeyword(ShaderKeywordStrings._RECEIVE_SHADOWS_OFF);
+			    }
+		    }
 		    
 		    // Setup double sided GI based on Cull state
 		    if (material.HasProperty(Properties.RenderFace))
@@ -391,7 +414,15 @@ namespace JuanShaderEditor
 		    isSpecularWorkflow = false;     // default is metallic workflow
 		    if (material.HasProperty(Properties.WorkflowMode))
 			    isSpecularWorkflow = ((WorkflowMode)material.GetFloat(Properties.WorkflowMode)) == WorkflowMode.Specular;
-		    CoreUtils.SetKeyword(material, "_SPECULAR_SETUP", isSpecularWorkflow);
+		    
+		    if (isSpecularWorkflow)
+		    {
+			    material.EnableKeyword("_SPECULAR_SETUP");
+		    }
+		    else
+		    {
+			    material.DisableKeyword("_SPECULAR_SETUP");
+		    }
 	    }
 
 	    protected void DrawQueueOffsetField(MaterialEditor materialEditor)
