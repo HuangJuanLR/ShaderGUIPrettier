@@ -36,6 +36,8 @@ namespace JuanShaderEditor
         Translucent = 4,
     }
     
+    
+    
     public enum SpecOcclusionMode
     {
         Off = 0,
@@ -43,7 +45,6 @@ namespace JuanShaderEditor
         FromBentNormalsAndAO = 2,
         FromGI = 3
     }
-    
     public enum SurfaceType
     {
         Opaque,

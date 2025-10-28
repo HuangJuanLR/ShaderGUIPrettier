@@ -21,8 +21,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Graph Separator Demo
-  m_Shader: {fileID: -6465566751694194690, guid: 75193dcb4f8d2b74fbc40e0de2aa4fd7,
-    type: 3}
+  m_Shader: {fileID: -6465566751694194690, guid: e18d343138296bf43a7f2aa7b71a5063, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -30,8 +29,9 @@ Material:
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
-  m_CustomRenderQueue: -1
-  stringTagMap: {}
+  m_CustomRenderQueue: 2000
+  stringTagMap:
+    RenderType: Opaque
   disabledShaderPasses: []
   m_LockedProperties: 
   m_SavedProperties:
@@ -99,10 +99,13 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
+    - _50_2_Space: 0
     - _AlphaClip: 0
+    - _AlphaToMask: 0
     - _Blend: 0
     - _Boolean: 0
     - _BumpScale: 1
+    - _CastShadows: 1
     - _ClearCoatMask: 0
     - _ClearCoatSmoothness: 0
     - _Cull: 2
@@ -112,6 +115,8 @@ Material:
     - _DstBlend: 0
     - _EnvironmentReflections: 1
     - _Float: 0
+    - _Float_1: 0
+    - _Float_2: 0
     - _GlossMapScale: 0
     - _Glossiness: 0
     - _GlossyReflections: 0
@@ -127,7 +132,9 @@ Material:
     - _SrcBlend: 1
     - _Surface: 0
     - _WorkflowMode: 1
+    - _ZTest: 4
     - _ZWrite: 1
+    - _ZWriteControl: 0
     - __50_Space: 0
     - __5_Separator_Line: 0
     - __Another_Separator: 0

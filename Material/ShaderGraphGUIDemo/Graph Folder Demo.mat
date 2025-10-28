@@ -21,19 +21,21 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Graph Folder Demo
-  m_Shader: {fileID: -6465566751694194690, guid: 5cc32f83b30163e428522f0a34060d6b,
-    type: 3}
+  m_Shader: {fileID: -6465566751694194690, guid: f333f00ec7ee47e4cb19f04bf03a73fd, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords:
+  - _FEATURE_ONE
+  m_InvalidKeywords:
   - _ENUM_FEATURE_A
-  m_InvalidKeywords: []
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
   m_DoubleSidedGI: 0
   m_CustomRenderQueue: -1
-  stringTagMap: {}
-  disabledShaderPasses: []
+  stringTagMap:
+    RenderType: Opaque
+  disabledShaderPasses:
+  - SHADOWCASTER
   m_LockedProperties: 
   m_SavedProperties:
     serializedVersion: 3
@@ -90,6 +92,14 @@ Material:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
+    - _Texture2D_1:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Texture2D_2:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
     - unity_Lightmaps:
         m_Texture: {fileID: 0}
         m_Scale: {x: 1, y: 1}
@@ -105,13 +115,19 @@ Material:
     m_Ints: []
     m_Floats:
     - _AlphaClip: 0
+    - _AlphaToMask: 0
+    - _Another_Boolean: 0
+    - _Another_Boolean_Condition_Folder_By_Boolean_Off: 0
     - _BOOLEAN_FEATURE: 0
     - _BOOLEAN_FEATURE_Show_by_Boolean_Keyword: 0
     - _Blend: 0
+    - _BlendModePreserveSpecular: 1
     - _Boolean: 0
     - _BumpScale: 1
+    - _CastShadows: 0
     - _ClearCoatMask: 0
     - _ClearCoatSmoothness: 0
+    - _Close_Close_Condition_Block_By_Texture: 0
     - _Cull: 2
     - _Cutoff: 0.5
     - _DetailAlbedoMapScale: 1
@@ -120,7 +136,10 @@ Material:
     - _ENUM_FEATURE: 0
     - _ENUM_FEATURE_B_Show_by_Enum_Keyword: 0
     - _EnvironmentReflections: 1
+    - _FEATURE: 0
+    - _FEATURE_THREE_Condition_Folder_By_Feature: 0
     - _Float: 0
+    - _Float_1: 0
     - _Float_2_0_to_show_folder: 0
     - _GlossMapScale: 0
     - _Glossiness: 0
@@ -133,19 +152,29 @@ Material:
     - _QueueOffset: 0
     - _ReceiveShadows: 1
     - _RegularBoolean: 0
+    - _RegularBoolean_Condition_Folder_By_Boolean: 0
     - _RegularBoolean_Show_by_Boolean_Off: 0
     - _RegularFloat: 1
     - _RegularFloat_2_0_Show_by_Float: 0
     - _RegularTexture2D_Show_by_Texture: 0
+    - _Regular_Float: 0
+    - _Regular_Float_3_0_Condition_Folder_By_Float: 0
     - _Smoothness: 0.5
     - _SmoothnessTextureChannel: 0
     - _SpecularHighlights: 1
     - _SrcBlend: 1
     - _Surface: 0
+    - _Texture2D_Condition_Block_By_Texture: 0
     - _WorkflowMode: 1
+    - _ZTest: 4
     - _ZWrite: 1
+    - _ZWriteControl: 0
     - __BOOLEAN_FEATURE_Show_by_Boolean_Keyword: 0
     - __Close_Close_Always_Open_Folder: 0
+    - __Close_Close_Condition_Folder: 0
+    - __Close_Close_Condition_Folder_By_Boolean: 0
+    - __Close_Close_Condition_Folder_By_Boolean_Off: 0
+    - __Close_Close_Condition_Folder_By_Float: 0
     - __Close_Close_Show_by_Boolean: 0
     - __Close_Close_Show_by_Boolean_1: 0
     - __Close_Close_Show_by_Boolean_Keyword: 0
@@ -156,6 +185,7 @@ Material:
     - __Close_Close_Simple_Folder: 0
     - __ENUM_FEATURE_B_Show_by_Enum_Keyword: 0
     - __Make_the_float_below_2_0_to_show_folder_Info: 0
+    - __Make_the_float_below_3_0_to_enable_folder_Warning: 0
     - __Make_this_float_2_0_to_show_folder_Info: 0
     - __RegularBoolean_Show_by_Boolean: 0
     - __RegularBoolean_Show_by_Boolean_1: 0
@@ -168,6 +198,8 @@ Material:
     m_Colors:
     - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _Color_2: {r: 0, g: 0, b: 0, a: 0}
+    - _Color_inside_Condition_Block: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
     - _Just_A_ColorField: {r: 1, g: 1, b: 1, a: 1}
     - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}

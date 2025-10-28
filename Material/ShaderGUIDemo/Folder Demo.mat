@@ -21,7 +21,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Folder Demo
-  m_Shader: {fileID: 4800000, guid: 5923b70129328e341b70af410f7276cc, type: 3}
+  m_Shader: {fileID: 4800000, guid: 92202cf0f95721c469a3fff0420513af, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords:

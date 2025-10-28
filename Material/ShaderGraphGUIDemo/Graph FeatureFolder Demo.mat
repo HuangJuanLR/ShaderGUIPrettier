@@ -21,8 +21,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: Graph FeatureFolder Demo
-  m_Shader: {fileID: -6465566751694194690, guid: 08b42f39ccd949a428d6c5cfc9543ff6,
-    type: 3}
+  m_Shader: {fileID: -6465566751694194690, guid: ebefb3241757ff44ebf53272461eb83c, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords:

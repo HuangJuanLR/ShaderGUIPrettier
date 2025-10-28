@@ -21,7 +21,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: ConditionFolder Demo
-  m_Shader: {fileID: 4800000, guid: 3e15b0ca741212e4fa63eb954c0f64e3, type: 3}
+  m_Shader: {fileID: 4800000, guid: a02dfb9c2a1dc4a44973ca224a33196e, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []

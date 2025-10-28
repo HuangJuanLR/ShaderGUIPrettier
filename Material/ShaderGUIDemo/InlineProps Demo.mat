@@ -21,7 +21,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: InlineProps Demo
-  m_Shader: {fileID: 4800000, guid: dd1b962fce319cd4eb7d2e6162a28776, type: 3}
+  m_Shader: {fileID: 4800000, guid: 8935661536c4f384b9a790a599d8a7d4, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []

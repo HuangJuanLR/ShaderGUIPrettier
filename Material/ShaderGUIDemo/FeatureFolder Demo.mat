@@ -21,11 +21,10 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: FeatureFolder Demo
-  m_Shader: {fileID: 4800000, guid: b6a698c5b79b81b488d8a0c0038551c6, type: 3}
+  m_Shader: {fileID: 4800000, guid: 804e43f480f057848838c30d43d7cc85, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
-  m_ValidKeywords:
-  - _SHADER_FEATURE_ONE
+  m_ValidKeywords: []
   m_InvalidKeywords: []
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0

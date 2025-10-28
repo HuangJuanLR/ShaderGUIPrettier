@@ -21,8 +21,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: TextField Demo
-  m_Shader: {fileID: -6465566751694194690, guid: a9f7f50b75fce66479a3455da20fc57c,
-    type: 3}
+  m_Shader: {fileID: -6465566751694194690, guid: cf452bca89a71134e862ed8347807735, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []

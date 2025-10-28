@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file
 
+## [1.02.0] - 2025-07-19
+
+### Changed
+
+- Change project name to ShaderGUIPrettier
+
 ## [1.02.0] - 2024-03-15
 
 ### Fixed

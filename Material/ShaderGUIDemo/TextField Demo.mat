@@ -8,7 +8,7 @@ Material:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_Name: TextField Demo
-  m_Shader: {fileID: 4800000, guid: a433da1205dc0be48aa01d004f5e951f, type: 3}
+  m_Shader: {fileID: 4800000, guid: 1230c3fc3de59be47bf5efc18dbe048e, type: 3}
   m_Parent: {fileID: 0}
   m_ModifiedSerializedProperties: 0
   m_ValidKeywords: []
@@ -96,6 +96,10 @@ Material:
     - _DstBlendAlpha: 0
     - _EnvironmentReflections: 1
     - _Float: 0
+    - _Float1: 0
+    - _Float2: 0
+    - _Float3: 0
+    - _Float5: 0
     - _GlossMapScale: 0
     - _Glossiness: 0
     - _GlossyReflections: 0
