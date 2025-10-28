@@ -26,7 +26,6 @@ using UnityEditor;
 using System.Collections.Generic;
 using System;
 using System.IO;
-using Codice.Client.Common;
 using JuanShaderEditor;
 
 namespace JuanShaderEditor
