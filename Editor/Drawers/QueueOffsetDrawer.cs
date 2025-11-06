@@ -26,7 +26,7 @@ using UnityEditor;
 using UnityEngine.Rendering;
 using UnityEngine;
 
-namespace JuanShaderEditor
+namespace SGP
 {
     public class QueueOffsetDrawer : MaterialPropertyDrawer
     {

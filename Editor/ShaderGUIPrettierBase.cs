@@ -29,7 +29,7 @@ using System.Linq;
 using UnityEditor.Rendering;
 using UnityEngine.Rendering;
 
-namespace JuanShaderEditor
+namespace SGP
 {
 	internal static class ShaderKeywordStrings
 	{
@@ -63,7 +63,7 @@ namespace JuanShaderEditor
 		public static readonly string Emission = "_EMISSION";
 	}
 	
-	public class JuanBaseShaderGUI : ShaderGUI
+	public class ShaderGUIPrettierBase : ShaderGUI
 	{
 		protected Material material;
 
@@ -170,9 +170,13 @@ namespace JuanShaderEditor
 			    DrawPopupProperty(ShaderGUIStyle.workflowModeLabel, workflowModeProp, materialEditor, Enum.GetNames(typeof(WorkflowMode)));
                 
 			    DrawPopupProperty(ShaderGUIStyle.surfaceTypeLabel, surfaceTypeProp, materialEditor, Enum.GetNames(typeof(SurfaceType)));
+			    
 			    if ((surfaceTypeProp != null) && ((SurfaceType)surfaceTypeProp.floatValue == SurfaceType.Transparent))
-				    DrawPopupProperty(ShaderGUIStyle.blendModeLabel, blendModeProp, materialEditor, Enum.GetNames(typeof(BlendMode)));
-                
+			    {
+				    DrawPopupProperty(ShaderGUIStyle.blendModeLabel, blendModeProp, materialEditor,
+					    Enum.GetNames(typeof(BlendMode)));
+			    }
+
 			    DrawPopupProperty(ShaderGUIStyle.renderFaceLabel, renderFaceProp, materialEditor, Enum.GetNames(typeof(RenderFace)));
                 
 			    DrawPopupProperty(ShaderGUIStyle.depthWriteLabel, depthWriteProp, materialEditor, Enum.GetNames(typeof(ZWriteControl)));

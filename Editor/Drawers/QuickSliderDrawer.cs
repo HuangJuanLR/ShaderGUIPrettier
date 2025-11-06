@@ -27,7 +27,7 @@ using UnityEditor;
 using UnityEngine;
 using System.Collections.Generic;
 
-namespace JuanShaderEditor
+namespace SGP
 {
 	public class QuickSliderDrawer : MaterialPropertyDrawer
 	{

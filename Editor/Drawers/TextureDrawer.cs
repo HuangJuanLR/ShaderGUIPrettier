@@ -26,7 +26,7 @@ using System.Linq;
 using UnityEditor;
 using UnityEngine;
 
-namespace JuanShaderEditor
+namespace SGP
 {
     public class TextureDrawer : MaterialPropertyDrawer
     {

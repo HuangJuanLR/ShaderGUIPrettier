@@ -26,7 +26,7 @@ using UnityEngine;
 using UnityEditor;
 using UnityEditor.Rendering.BuiltIn.ShaderGraph;
 
-namespace JuanShaderEditor
+namespace SGP
 {
     public class DoubleSidedNormalModeDrawer : MaterialPropertyDrawer
     {

@@ -27,7 +27,7 @@ using UnityEngine;
 using UnityEditor;
 using System.Collections.Generic;
 
-namespace JuanShaderEditor
+namespace SGP
 {
     public class RemappingDrawer : MaterialPropertyDrawer
     {

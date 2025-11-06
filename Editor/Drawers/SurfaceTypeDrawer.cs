@@ -25,7 +25,7 @@ using UnityEditor;
 using UnityEngine;
 using UnityEngine.Rendering;
 
-namespace JuanShaderEditor
+namespace SGP
 {
     public class SurfaceTypeDrawer : MaterialPropertyDrawer
     {

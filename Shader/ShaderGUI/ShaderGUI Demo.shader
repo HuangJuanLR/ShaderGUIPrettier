@@ -481,5 +481,5 @@ Shader "Juan/ShaderGUI Demo/ShaderGUI Demo"
         }
     }
     
-    CustomEditor "JuanShaderGUI"
+    CustomEditor "ShaderGUIPrettier"
 }

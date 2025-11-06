@@ -25,7 +25,7 @@ using System;
 using UnityEditor;
 using UnityEngine;
 
-namespace JuanShaderEditor
+namespace SGP
 {
 	public class HideInInspectorDrawer : IUniversalDrawer
 	{

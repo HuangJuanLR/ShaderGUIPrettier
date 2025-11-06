@@ -1,0 +1,281 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!21 &2100000
+Material:
+  serializedVersion: 8
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: ShaderGraohGUI Performance Demo
+  m_Shader: {fileID: -6465566751694194690, guid: 0c6c74235ac935145865d702ff49876e,
+    type: 3}
+  m_Parent: {fileID: 0}
+  m_ModifiedSerializedProperties: 0
+  m_ValidKeywords:
+  - _ENUM_B
+  m_InvalidKeywords: []
+  m_LightmapFlags: 4
+  m_EnableInstancingVariants: 0
+  m_DoubleSidedGI: 0
+  m_CustomRenderQueue: -1
+  stringTagMap:
+    RenderType: Opaque
+  disabledShaderPasses: []
+  m_LockedProperties: 
+  m_SavedProperties:
+    serializedVersion: 3
+    m_TexEnvs:
+    - _BaseMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _BumpMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ConditionTexture2D:
+        m_Texture: {fileID: 2800000, guid: 376df6544d05b5a49a19813bd4368166, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailAlbedoMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailMask:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _DetailNormalMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _EmissionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MainTex:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _MetallicGlossMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _NormalMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _OcclusionMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _ParallaxMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _RegularTexture2D01:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _RegularTexture2D02:
+        m_Texture: {fileID: 2800000, guid: 376df6544d05b5a49a19813bd4368166, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _SpecGlossMap:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Texture2D:
+        m_Texture: {fileID: 2800000, guid: 376df6544d05b5a49a19813bd4368166, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _Texture2DAsset_14c71d10f6b84f1ebc45ac51dd9e1a71_Out_0:
+        m_Texture: {fileID: 2800000, guid: 376df6544d05b5a49a19813bd4368166, type: 3}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _TextureWithBoolean:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - _TextureWithVector:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_Lightmaps:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_LightmapsInd:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    - unity_ShadowMasks:
+        m_Texture: {fileID: 0}
+        m_Scale: {x: 1, y: 1}
+        m_Offset: {x: 0, y: 0}
+    m_Ints: []
+    m_Floats:
+    - _: 0
+    - _5_Spacer: 0
+    - _AlphaClip: 0
+    - _AlphaToMask: 0
+    - _BOOLEAN: 0
+    - _Blend: 0
+    - _BlendModePreserveSpecular: 0
+    - _Boolean: 0
+    - _BumpScale: 1
+    - _CastShadows: 1
+    - _ClearCoatMask: 0
+    - _ClearCoatSmoothness: 0
+    - _ConditionBoolean: 1
+    - _ConditionBoolean_ConditionFolder03: 0
+    - _ConditionTexture2D_ConditionFolder02: 0
+    - _Cull: 2
+    - _Cutoff: 0.5
+    - _DetailAlbedoMapScale: 1
+    - _DetailNormalMapScale: 1
+    - _DstBlend: 0
+    - _ENUM: 1
+    - _ENUM_B_ConditionFolder01: 0
+    - _ENUM_C_Folder_With_Condition: 0
+    - _EnvironmentReflections: 1
+    - _FEATURE01: 0
+    - _Float: 0
+    - _Float1: 0
+    - _Float_1: 0
+    - _Float_2: -0.56
+    - _GlossMapScale: 0
+    - _Glossiness: 0
+    - _GlossyReflections: 0
+    - _Metallic: 0
+    - _OcclusionStrength: 1
+    - _Parallax: 0.005
+    - _Put_lots_of_drawers_to_see_how_it_performs_info: 0
+    - _QueueControl: 0
+    - _QueueOffset: 0
+    - _ReceiveShadows: 1
+    - _RegularFloat: 0
+    - _RegularFloat01: 0.6
+    - _RemappingMin: 0
+    - _SHADER_FEATURE_01: 0
+    - _SHADER_FEATURE_ENUM: 0
+    - _SliderFloat: 0
+    - _Smoothness: 0.5
+    - _SmoothnessTextureChannel: 0
+    - _SpecularHighlights: 1
+    - _SrcBlend: 1
+    - _Surface: 0
+    - _WorkflowMode: 1
+    - _ZTest: 4
+    - _ZWrite: 1
+    - _ZWriteControl: 0
+    - __1: 0
+    - __2: 0
+    - __20_Separator: 0
+    - __2_Separator: 0
+    - __3: 0
+    - __50_Spacer: 0
+    - __5_Separator: 0
+    - __BooleanAfterTexture: 0
+    - __Can_I_Write_Text_Field_Here_Or_Add_a_info_box: 0.05
+    - __Can_I_Write_Text_Field_Here_Or_Add_a_info_box_n_Maybe_Add_the_functionality_to_change_line: 1.43
+    - __Close: 0
+    - __CloseCF01: 0
+    - __CloseCF02: 0
+    - __CloseCF03: 0
+    - __CloseFF01: 0
+    - __CloseFolder1: 0
+    - __CloseFolder2: 0
+    - __CloseFolder3: 0
+    - __CloseFolder4: 0
+    - __CloseFolder5: 0
+    - __Close_CF01: 0
+    - __Close_CF02: 0
+    - __Close_CF03: 0
+    - __Close_FF01: 0
+    - __Close_Folder1: 0
+    - __Close_Folder2: 0
+    - __Close_Folder3: 0
+    - __Close_Folder4: 0
+    - __Close_Folder5: 0
+    - __Close_FolderWithCondition: 0
+    - __Close_TextBlock: 0
+    - __Color: 0
+    - __Color_1: 0
+    - __Color_2: 0
+    - __ConditionBoolean_ConditionFolder03: 0
+    - __ConditionProperty_ConditionFolder01: 0
+    - __ConditionTexture2D_ConditionFolder02: 0
+    - __ENUM_B_ConditionFolder01: 0
+    - __ENUM_C_FolderWithCondition: 0
+    - __ENUM_C_Folder_With_Condition: 0
+    - __Enum_2_0_ConditionFolder01: 0
+    - __F_SHADER_FEATURE_01: 0
+    - __Folder: 0
+    - __Folder1: 0
+    - __Folder2: 0
+    - __Folder3: 0
+    - __Folder4: 0
+    - __Folder_1: 0
+    - __Folder_2: 0
+    - __Folder_3: 0
+    - __Folder_4: 0
+    - __Folder_Folder1: 0
+    - __Folder_Folder2: 0
+    - __Folder_Folder3: 0
+    - __Folder_Folder4: 0
+    - __Header: 0
+    - __NormalIntensity: 2.03
+    - __RemappingMax: 0
+    - __SHADER_FEATURE_01: 0
+    - __Separator: 0
+    - __Shader_Feature: 0
+    - __Spacer: 0
+    - __Standard_Drawer: 0
+    - __Text_Block: 0
+    - __This_is_Always_Open_Folder_Warning: 0
+    - __This_is_a_help_box_info: 0
+    - __This_is_a_text_box_label: 0
+    - __True_Always_Open_Folder: 0
+    - ___ConditionBoolean_ConditionFolder03: 0
+    - ___ConditionTexture2D_ConditionFolder02: 0
+    - ___Enum_2_0_ConditionFolder01: 0
+    m_Colors:
+    - _BaseColor: {r: 1, g: 1, b: 1, a: 1}
+    - _Color: {r: 1, g: 1, b: 1, a: 1}
+    - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
+    - _RegularColor01: {r: 0.5377358, g: 0.5377358, b: 0.5377358, a: 1}
+    - _RegularVector2: {r: 0, g: 5, b: 0, a: 0}
+    - _RemappingVector2: {r: 0, g: 5, b: 0, a: 0}
+    - _SpecColor: {r: 0.19999996, g: 0.19999996, b: 0.19999996, a: 1}
+    - _Vector2: {r: 0, g: 0, b: 0, a: 0}
+    - _Vector2_1: {r: 0, g: 0, b: 0, a: 0}
+    - _Vector3: {r: 0, g: 0, b: 0, a: 0}
+    - _Vector4: {r: 0, g: 0, b: 0, a: 0}
+    - __2RegularVector2: {r: 0, g: 5, b: 0, a: 0}
+    - __2Vector2: {r: 0, g: 5, b: 0, a: 0}
+    - __3Vector3: {r: 0, g: 0, b: 0, a: 0}
+    - __4Vector4: {r: 0, g: 0, b: 0, a: 0}
+    - __Close_AlwaysOpenFolder: {r: 0, g: 0, b: 0, a: 0}
+    - __Folder5: {r: 0, g: 0, b: 0, a: 0}
+    - __Folder_5: {r: 0, g: 0, b: 0, a: 0}
+    - __Folder_Folder5: {r: 0, g: 0, b: 0, a: 0}
+    - __RegularColor02: {r: 1, g: 1, b: 1, a: 1}
+    - __RemappingVector2: {r: 0, g: 2.685349, b: 0, a: 0}
+    - __ScaleOffset: {r: 1, g: 1, b: 0, a: 0}
+    - __VectorAfterTexture: {r: 0, g: 0, b: 0, a: 0}
+  m_BuildTextureStacks: []
+--- !u!114 &2187513904844528956
+MonoBehaviour:
+  m_ObjectHideFlags: 11
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0353a89b1f911e48b9e16bdc9f2e058, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  version: 7

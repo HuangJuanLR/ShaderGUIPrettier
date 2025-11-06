@@ -24,7 +24,7 @@ OTHER DEALINGS IN THE SOFTWARE.
 using UnityEditor;
 using UnityEngine;
 
-namespace JuanShaderEditor
+namespace SGP
 {
     public static class ShaderGUIStyle
     {

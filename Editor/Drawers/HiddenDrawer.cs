@@ -25,7 +25,7 @@ using System;
 using UnityEditor;
 using UnityEngine;
 
-namespace JuanShaderEditor
+namespace SGP
 {
 	// Use [HideInInspector] Instead, This is only for testing purpose
 	public class HiddenDrawer : MaterialPropertyDrawer

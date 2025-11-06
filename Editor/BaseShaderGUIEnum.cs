@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace JuanShaderEditor
+namespace SGP
 {
     // Put these in a separate file in case Enum changing with Unity Version
     public enum BlendMode

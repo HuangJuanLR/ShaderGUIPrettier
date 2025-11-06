@@ -27,7 +27,7 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 
-namespace JuanShaderEditor
+namespace SGP
 {
 	public class FolderDrawer : IUniversalDrawer
 	{

@@ -25,7 +25,7 @@ using System;
 using UnityEngine;
 using UnityEditor;
 
-namespace JuanShaderEditor
+namespace SGP
 {
     public class CullModeDrawer : MaterialPropertyDrawer
     {

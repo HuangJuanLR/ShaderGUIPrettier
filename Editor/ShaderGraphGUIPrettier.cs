@@ -25,9 +25,9 @@ using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEditor;
-using JuanShaderEditor;
+using SGP;
 
-namespace JuanShaderEditor
+namespace SGP
 {
     public enum SubType
     {
@@ -60,7 +60,7 @@ namespace JuanShaderEditor
         DefaultMax,
     }
     
-    public class JuanCustomShaderGraphGUI : JuanBaseShaderGUI
+    public class ShaderGraphGUIPrettier : ShaderGUIPrettierBase
     {
         // private Material material;
         private IUniversalDrawer containerDrawer;
@@ -554,7 +554,7 @@ namespace JuanShaderEditor
     }
 }
 
-public class JuanShaderGraphGUI : JuanShaderEditor.JuanCustomShaderGraphGUI
+public class ShaderGraphGUIPrettier : SGP.ShaderGraphGUIPrettier
 {
 }
 

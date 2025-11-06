@@ -26,11 +26,11 @@ using UnityEditor;
 using System.Collections.Generic;
 using System;
 using System.IO;
-using JuanShaderEditor;
+using SGP;
 
-namespace JuanShaderEditor
+namespace SGP
 {
-	public class JuanCustomShaderGUI : JuanBaseShaderGUI
+	public class ShaderGUIPrettier : ShaderGUIPrettierBase
 	{
 	    private IUniversalDrawer containerDrawer;
 	    
@@ -327,7 +327,7 @@ namespace JuanShaderEditor
 	}
 }
 
-public class JuanShaderGUI : JuanShaderEditor.JuanCustomShaderGUI
+public class ShaderGUIPrettier : SGP.ShaderGUIPrettier
 {
 	
 }
