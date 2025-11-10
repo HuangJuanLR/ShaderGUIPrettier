@@ -173,5 +173,5 @@ Shader "Juan/ShaderGUI Demo/SpecialDrawer Demo"
             ENDHLSL
         }
     }
-    CustomEditor "JuanShaderGUI"
+    CustomEditor "ShaderGUIPrettier"
 }

@@ -344,7 +344,7 @@
     "hlslDeclarationOverride": 0,
     "m_Hidden": false,
     "m_Value": {
-        "m_SerializedTexture": "{\"texture\":{\"instanceID\":0}}",
+        "m_SerializedTexture": "",
         "m_Guid": ""
     },
     "isMainTexture": false,
@@ -937,7 +937,7 @@
     "hlslDeclarationOverride": 0,
     "m_Hidden": false,
     "m_Value": {
-        "m_SerializedTexture": "{\"texture\":{\"instanceID\":0}}",
+        "m_SerializedTexture": "",
         "m_Guid": ""
     },
     "isMainTexture": false,
@@ -994,7 +994,7 @@
     "m_CastShadows": false,
     "m_ReceiveShadows": true,
     "m_SupportsLODCrossFade": false,
-    "m_CustomEditorGUI": "JuanShaderGraphGUI",
+    "m_CustomEditorGUI": "ShaderGraphGUIPrettier",
     "m_SupportVFX": false
 }
 
@@ -1491,7 +1491,7 @@
     "hlslDeclarationOverride": 0,
     "m_Hidden": false,
     "m_Value": {
-        "m_SerializedTexture": "{\"texture\":{\"instanceID\":0}}",
+        "m_SerializedTexture": "",
         "m_Guid": ""
     },
     "isMainTexture": false,

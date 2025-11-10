@@ -154,5 +154,5 @@ Shader "Juan/ShaderGUI Demo/TextField Demo"
             ENDHLSL
         }
     }
-    CustomEditor "JuanShaderGUI"
+    CustomEditor "ShaderGUIPrettier"
 }

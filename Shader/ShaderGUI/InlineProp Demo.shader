@@ -185,5 +185,5 @@ Shader "Juan/ShaderGUI Demo/InlineProp Demo"
             ENDHLSL
         }
     }
-    CustomEditor "JuanShaderGUI"
+    CustomEditor "ShaderGUIPrettier"
 }

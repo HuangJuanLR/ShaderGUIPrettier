@@ -1,10 +1,6 @@
-# Juan Shader&GraphGUI
-
-![Image description](./resources/JuanShader&GraphGUI-Cover.png)
+# ShaderGUIPrettier
 
 Efficient GUI for both ShaderLab and ShaderGraph
-
-[![Discord](https://img.shields.io/discord/1197748221368352821.svg)](https://discord.gg/nJVynaP2J3) Join us on Discord
 
 Consider this page as text instructions
 
@@ -49,6 +45,7 @@ Want to see new features of the latest version? Please refer to [CHANGELOG](./C
   * [Vector](#vector)
   * [TextField](#textfield)
   * [Space & Separator](#space--separator)
+  * [ColorRamp](#colorramp)
   * [Demo](#shadergui-demo)
 * [Shader Graph](#shader-graph)
   * [Folder](#folder-1)
@@ -81,9 +78,9 @@ Want to see new features of the latest version? Please refer to [CHANGELOG](./C
 
 ### Manually Download
 
-- Go to the release page and download Juan_Shader&GraphGUI.unitypackage
+- Clone this repo into your project
 
-- Drag it into your Unity project and click import
+- Done
 
 ---
 
@@ -91,15 +88,15 @@ Want to see new features of the latest version? Please refer to [CHANGELOG](./C
 
 ### Installing on Shader
 
-Add `CustomEditor "JuanShaderGUI"` to the end of your shader file
+Add `CustomEditor "ShaderGUIPrettier"` to the end of your shader file
 
-![Image description](./resources/shaderlab_install.png)
+![Image description](./Doc/shaderlab_install.png)
 
 ### Installing on Shader Graph
 
-Add `JuanShaderGraph` to Custom Editor GUI under Graph Inspector -> Graph Settings
+Add `ShaderGraphGUIPrettier` to Custom Editor GUI under Graph Inspector -> Graph Settings
 
-![Image description](./resources/shadergraph_install.png)
+![Image description](./Doc/shadergraph_install.png)
 
 ---
 
@@ -177,7 +174,7 @@ When we find `[Folder]` syntax, then look for the corresponding `[Close]` syntax
 
 We can also put a `(folder name)` after Close to manually pair them up for readability
 
-![Image description](./resources/folderdemoappearance.png)
+![Image description](./Doc/folderdemoappearance.png)
 
 ### ConditionFolder
 
@@ -210,7 +207,7 @@ _Color3("Color3", Color) = (1,1,1,1)
 _Float("Float", Range(0, 1)) = 0
 ```
 
-![Image description](./resources/conditionfolderdemoappearance.png)
+![Image description](./Doc/conditionfolderdemoappearance.png)
 
 ## ConditionBlock
 
@@ -239,7 +236,7 @@ _Color_Two("Color Two", Color) = (1,1,1,1)
 [Close]
 ```
 
-![Image description](./resources/featurefolderdemoappearance.png)
+![Image description](./Doc/featurefolderdemoappearance.png)
 
 ### Texture
 
@@ -274,7 +271,7 @@ _Color_Two("Color Two", Color) = (1,1,1,1)
 [Texture(_SHADER_FEATURE)]_TexWithKeyword("Texture with Keyword", 2D) = "white"{}
 ```
 
-![Image description](./resources/textureappearance.png)
+![Image description](./Doc/textureappearance.png)
 
 ### Remapping
 
@@ -299,7 +296,7 @@ _Color_Two("Color Two", Color) = (1,1,1,1)
 [Remapping]_VectorRemap("Vector Remapping", Vector) = (-1,2,0,0)
 ```
 
-![Image description](./resources/remappingappearance.png)
+![Image description](./Doc/remappingappearance.png)
 
 ### QuickSlider
 
@@ -323,7 +320,7 @@ _Color_Two("Color Two", Color) = (1,1,1,1)
 [QuickSlider(0, 5, Int)]_QuickSliderInt("Quick Slider Int", Float) = 1.0
 ```
 
-![Image description](./resources/quicksliderappearance.png)
+![Image description](./Doc/quicksliderappearance.png)
 
 ### Vector
 
@@ -341,7 +338,7 @@ _Color_Two("Color Two", Color) = (1,1,1,1)
 [Vector2]_Vector2("Vector2", Vector) = (1,0,0,0)
 ```
 
-![Image description](./resources/vectorappearance.png)
+![Image description](./Doc/vectorappearance.png)
 
 ### TextField
 
@@ -366,7 +363,7 @@ _Color_Two("Color Two", Color) = (1,1,1,1)
 [Close]
 ```
 
-![Image description](./resources/textinsideappearance.png)
+![Image description](./Doc/textinsideappearance.png)
 
 ```
 [Text(Thats how it looks like ouside #n Sadly in Thats I can not put a single quote after That)]
@@ -375,7 +372,7 @@ _Color_Two("Color Two", Color) = (1,1,1,1)
 [Text(Text Folder #n Error, Error)]
 ```
 
-![Image description](./resources/textoutsideappearance.png)
+![Image description](./Doc/textoutsideappearance.png)
 
 ### Space & Separator
 
@@ -397,7 +394,107 @@ _Color_Two("Color Two", Color) = (1,1,1,1)
 [EmptySpace]_Float("Float", Range(0, 1)) = 0.0
 ```
 
-![Image description](./resources/spaceandseparatorappearance.png)
+![Image description](./Doc/spaceandseparatorappearance.png)
+
+---
+
+### ColorRamp
+
+- The first property is displayed and naming only
+- Color properties should be named as #displayName + "Color" + index
+- Alpha properties should be named as #displayName + "Alpha" + index
+- One alpha property controls two alpha handles, so index in name should be 0/2/4/6
+- ColorCount and AlphaCount property are used to control the number of color handles, they should be named with #displayName + "ColorCount/AlphaCount"
+- Code for sampling color ramp are provided below
+
+```
+[ColorRamp]_Ramp("Color Ramp", Float) = 0
+[HideInInspector]_RampColor0("", Color) = (0,0,0,0)
+[HideInInspector]_RampColor1("", Color) = (1,1,1,1)
+[HideInInspector]_RampColor2("", Color) = (1,1,1,1)
+[HideInInspector]_RampColor3("", Color) = (1,1,1,1)
+[HideInInspector]_RampColor4("", Color) = (1,1,1,1)
+[HideInInspector]_RampColor5("", Color) = (1,1,1,1)
+[HideInInspector]_RampColor6("", Color) = (1,1,1,1)
+[HideInInspector]_RampColor7("", Color) = (1,1,1,1)
+[HideInInspector]_RampAlpha0("", Vector) = (1,0,1,1)
+[HideInInspector]_RampAlpha2("", Vector) = (1,1,1,1)
+[HideInInspector]_RampAlpha4("", Vector) = (1,1,1,1)
+[HideInInspector]_RampAlpha6("", Vector) = (1,1,1,1)
+[HideInInspector]_RampColorCount("", Int) = 2
+[HideInInspector]_RampAlphaCount("", Int) = 2
+```
+
+```
+// Code for sampling Color Ramp
+half3 SampleGradientColor(half3 colors[8], float colorTimes[8], int count, float pos)
+{
+    if (pos <= colorTimes[0])
+    {
+        return colors[0];
+    }
+    if (pos >= colorTimes[count - 1])
+    {
+        return colors[count - 1];
+    }
+
+    int2 indexes = 0;
+    
+    [loop]
+    for (int i = 0; i < count; i++)
+    {
+        if (pos < colorTimes[i])
+        {
+            indexes = int2(i - 1, i);
+            break;
+        }
+    }
+
+    half3 value0 = colors[indexes.x];
+    half pos0 = colorTimes[indexes.x];
+    half3 value1 = colors[indexes.y];
+    half pos1 = colorTimes[indexes.y];
+    
+    float interval = (pos - pos0) / (pos1 - pos0);
+    return lerp(value0, value1, interval);
+}
+
+half SampleGradientAlpha(half alphas[8], float alphaTimes[8], int count, float pos)
+{
+    if (pos <= alphaTimes[0])
+    {
+        return alphas[0];
+    }
+    if (pos >= alphaTimes[count - 1])
+    {
+        return alphas[count - 1];
+    }
+
+    int2 indexes = 0;
+    
+    [loop]
+    for (int i = 0; i < count; i++)
+    {
+        if (pos < alphaTimes[i])
+        {
+            indexes = int2(i - 1, i);
+            break;
+        }
+    }
+
+    half value0 = alphas[indexes.x];
+    half pos0 = alphaTimes[indexes.x];
+    half value1 = alphas[indexes.y];
+    half pos1 = alphaTimes[indexes.y];
+    
+    float interval = (pos - pos0) / (pos1 - pos0);
+    return lerp(value0, value1, interval);
+}
+```
+
+![Image description](./Doc/colorrampappearance.png)
+
+---
 
 ### ShaderGUI Demo
 
@@ -407,7 +504,7 @@ _Color_Two("Color Two", Color) = (1,1,1,1)
 
 - Find this at Shader -> ShaderGUI -> ShaderGUI Demo.shader
 
-![Image description](./resources/shaderguidemo.png)
+![Image description](./Doc/shaderguidemo.png)
 
 ---
 
@@ -439,13 +536,13 @@ _Color_Two("Color Two", Color) = (1,1,1,1)
 | [$(!_Property/_KEYWORD)]Folder Name          | Folder with Invert Property/Keyword(Off/0.0/Null as True)          |
 | [$(_Property/_KEYWORD,Condition)]Folder Name | Folder with Property/Keyword (Condition Specified) (On/Off, float) |
 
-![Image description](./resources/graphfolderblackboard.png)
+![Image description](./Doc/graphfolderblackboard.png)
 
 - How to read it ? When we found a `[$]`, then look for the corresponding `[Close]` syntax.
 
 - In Shader Graph, it would be better to put a folder name after `[Close]` syntax. Because we need a property to implement a certain syntax, so we must make sure every property has different names
 
-![Image description](./resources/graphfolderappearance.png)
+![Image description](./Doc/graphfolderappearance.png)
 
 ### ConditionFolder
 
@@ -457,9 +554,9 @@ _Color_Two("Color Two", Color) = (1,1,1,1)
 | [?(!_Property/_KEYWORD)]Random Name           | Condition Folder Invert                         |
 | [?(_Property/_KEYWORD, Condition)]Random Name | Condition Folder with Condition (On/Off, Float) |
 
-![Image description](./resources/graphconditionfolderblackboard.png)
+![Image description](./Doc/graphconditionfolderblackboard.png)
 
-![Image description](./resources/graphconditionfolderappearance.png)
+![Image description](./Doc/graphconditionfolderappearance.png)
 
 ### ConditionBlock
 
@@ -481,9 +578,9 @@ _Color_Two("Color Two", Color) = (1,1,1,1)
 |:---------------------- |:-------------- |
 | [+]Shader Feature Name | Feature Folder |
 
-![Image description](./resources/graphfeaturefolderblackboard.png)
+![Image description](./Doc/graphfeaturefolderblackboard.png)
 
-![Image description](./resources/graphfeaturefolderappearance.png)
+![Image description](./Doc/graphfeaturefolderappearance.png)
 
 ### Texture
 
@@ -500,9 +597,9 @@ _Color_Two("Color Two", Color) = (1,1,1,1)
 | &!_InlineProperty                    | Texture with Hide-If-Not-Null Property                                          |
 | &_BOOLEANKEYWORD                     | Texture with Keyword                                                            |
 
-![Image description](./resources/graphtextureblackboard.png)
+![Image description](./Doc/graphtextureblackboard.png)
 
-![Image description](./resources/graphtextureappearance.png)
+![Image description](./Doc/graphtextureappearance.png)
 
 ### Remapping
 
@@ -510,9 +607,9 @@ _Color_Two("Color Two", Color) = (1,1,1,1)
 |:----------- |:-------------------------------------- |
 | ~VectorName | Remapping (Use Default Value as Range) |
 
-![Image description](./resources/graphremappingblackboard.png)
+![Image description](./Doc/graphremappingblackboard.png)
 
-![Image description](./resources/graphremappingappearance.png)
+![Image description](./Doc/graphremappingappearance.png)
 
 ### Vector
 
@@ -522,9 +619,9 @@ _Color_Two("Color Two", Color) = (1,1,1,1)
 | @3VectorName | Vector3 |
 | @4VectorName | Vector4 |
 
-![Image description](./resources/graphvectorblackboard.png)
+![Image description](./Doc/graphvectorblackboard.png)
 
-![Image description](./resources/graphvectorappearance.png)
+![Image description](./Doc/graphvectorappearance.png)
 
 ### ScaleOffset
 
@@ -532,9 +629,9 @@ _Color_Two("Color Two", Color) = (1,1,1,1)
 |:----------- |:----------- |
 | #VectorName | ScaleOffset |
 
-![Image description](./resources/graphscaleoffsetblackboard.png)
+![Image description](./Doc/graphscaleoffsetblackboard.png)
 
-![Image description](./resources/graphscaleoffsetappearance.png)
+![Image description](./Doc/graphscaleoffsetappearance.png)
 
 ### TextField
 
@@ -543,9 +640,9 @@ _Color_Two("Color Two", Color) = (1,1,1,1)
 | [*(Enter your text here #n to change new line, type)] | Text (type: label/info/warning/error) |
 | [*(Enter your text here)]                             | Text without type (label by default)  |
 
-![Image description](./resources/graphtextblackboard.png)
+![Image description](./Doc/graphtextblackboard.png)
 
-![Image description](./resources/graphtextappearance.png)
+![Image description](./Doc/graphtextappearance.png)
 
 ### Space & Separator
 
@@ -558,9 +655,9 @@ _Color_Two("Color Two", Color) = (1,1,1,1)
 | ^(float)Random Name | Separator with Height |
 | %(float)Random Name | Space with Height     |
 
-![Image description](./resources/graphspaceblackboard.png)
+![Image description](./Doc/graphspaceblackboard.png)
 
-![Image description](./resources/graphspaceappearance.png)
+![Image description](./Doc/graphspaceappearance.png)
 
 ### ShaderGraphGUI Demo
 
@@ -568,9 +665,9 @@ _Color_Two("Color Two", Color) = (1,1,1,1)
 
 - Find this at Shader -> ShaderGraphGUI -> ShaderGraphGUI Demo.shadergraph
 
-![Image description](./resources/shadergraphguiblackboard.png)
+![Image description](./Doc/shadergraphguiblackboard.png)
 
-![Image description](./resources/shadergraphguidemo.png)
+![Image description](./Doc/shadergraphguidemo.png)
 
 ## Surface Options & Advanced Options
 
@@ -632,9 +729,9 @@ Follow the naming convention below if want to properly enable corresponding feat
 
 - _ENVIRONMENTREFLECTIONS_OFF
 
-![Image description](./resources/surfaceoptions.png)
+![Image description](./Doc/surfaceoptions.png)
 
-![Image description](./resources/advancedoptions.png)
+![Image description](./Doc/advancedoptions.png)
 
 ## License
 

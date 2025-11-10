@@ -378,5 +378,5 @@ Shader "Juan/ShaderGUI Demo/Performance Demo"
             ENDHLSL
         }
     }
-    CustomEditor "JuanShaderGUI"
+    CustomEditor "ShaderGUIPrettier"
 }
